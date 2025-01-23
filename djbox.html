@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 200px;
+            width: 100%;
+            background-color: aqua;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+<script>
+    let n=document.querySelector(".container");
+    function getcolor(){
+        let v1= Math.floor(Math.random()*256)
+        let v2= Math.floor(Math.random()*256)
+        let v3= Math.floor(Math.random()*256)
+        return `rgb(${v1},${v2}, ${v3})`
+    }
+    setInterval(() => {
+        n.style.background=getcolor()
+    }, 1000);
+    setInterval(() => {
+        document.querySelector(".box").style.background=getcolor();
+    },1000);
+</script>
+</html>
