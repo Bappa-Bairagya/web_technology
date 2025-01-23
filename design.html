@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: black;
+            height: 150px;
+            display: flex;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        img{
+            border-radius: 5px;
+            height: 150px;
+        }
+        .duration{
+            color: white;
+            background-color: black;
+            border-radius: 3px;
+            position: absolute;
+            top: 135px;
+            left: 230px;
+            padding: 3px;
+            opacity: 0.8;
+        }
+        .title{
+            color: white;
+            font-size: 25px;
+            font-weight:600;
+            margin: 6px;
+        }
+        .detail{
+            color: grey;
+            font-size: 15px;
+            margin: 6px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="thum">
+            <img src="" alt="">
+            <div class="duration"></div>
+        </div>
+        <div class="detailse">
+            <div class="title"></div>
+            <div class="detail"></div>
+        </div>
+    </div>
+</body>
+<script>
+    function creatcard(title,duration,thambnail,cname,views,day){
+        document.querySelector(".title").innerHTML=title;
+        document.querySelector(".duration").innerHTML=duration;
+        document.querySelector("img").src=thambnail;
+        if(views>1000000){
+            views=views/1000000+"M"
+        }
+       else if(views>1000){
+views=views/1000+"K"
+       }
+       else
+       views=views;
+        document.querySelector(".detail").innerHTML=cname+" . "+views+" . "+day+" months ago";
+    }
+    creatcard("Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1","18:20","https://i.ytimg.com/vi/KtL-SQ20Q0s/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDPqs5LtUVsb50otOywVTZEmI75fg","CodeWithHarry",2000000,5)
+</script>
+</html>
