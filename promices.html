@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Promices start");
+        let prom= new Promise((resolve,reject)=>{
+            let a=Math.random();
+            if(a<0.5){
+                reject("soory bro")
+            }
+            else{
+                resolve("bappa")
+            setTimeout(() => {
+                console.log("yes it is done");
+                
+            }, 3000);
+            }
+            
+        })
+prom.then((r)=>{
+    console.log(r);
+    
+}).catch((e)=>{
+    console.log(e);
+    
+})
+
+    </script>
+</body>
+</html>
