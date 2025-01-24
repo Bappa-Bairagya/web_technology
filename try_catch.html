@@ -11,6 +11,9 @@
 <script>
     let a= prompt("enter 1st number")
     let b= prompt("enter 2nd number")
+    if (isNaN(a)||isNaN(b)) {
+        throw new Error("you give wrong input");
+    }
     let sum= parseInt(a)+parseInt(b)
     alert(`the sum is `+sum)
 </script>
