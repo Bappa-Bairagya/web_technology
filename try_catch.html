@@ -15,6 +15,12 @@
         throw new Error("you give wrong input");
     }
     let sum= parseInt(a)+parseInt(b)
-    alert(`the sum is `+sum)
+    try {
+        alert(`the sum is `+sum*x)
+    } catch (error) {
+        console.log("you have mistake");
+        
+    }
+   
 </script>
 </html>
