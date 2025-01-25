@@ -38,7 +38,10 @@
     async function main() {
         let s=setInterval(() => {
             let last=document.body.getElementsByTagName("div")
+            console.log(last.length);
             last=last[last.length-1]
+            
+            
             if (last.innerHTML.endsWith("...")) {
                 last.innerHTML=last.innerHTML.slice(0,last.innerHTML.length-3)
             } else {
