@@ -1,5 +1,8 @@
 const fs=require("fs")
-console.log(fs);
-fs.writeFileSync("b.txt","hiiii")
-console.log("done");
+//console.log(fs);
+//fs.writeFileSync("b.txt","helloi")
+fs.writeFile("a.txt", "hi i am a",()=>{
+    console.log("done");
+})
+
 
