@@ -11,3 +11,4 @@ this.year=year;
 const car=new mycar("bappa",2003)
 
 console.log(car.age());
+console.log(car.name);
