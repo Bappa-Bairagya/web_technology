@@ -7,12 +7,27 @@
 </head>
 <body>
     <h1 id="h"></h1>
+    <h2 id="h2"></h2>
     <script>
         setInterval(myclock,1000);
         function myclock(){
             let d=new Date();
             document.getElementById("h").innerText=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
         }
+        // let obj=new Object();
+        // obj.name="bappa"
+        // obj.pwd=203
+        let obj={
+            name:"bappa"
+        }
+       // document.querySelector("#h2").innerText=obj.name
+        console.log(obj);
+        let jdata=JSON.stringify(obj)
+        console.log(jdata);
+        document.querySelector("#h2").innerText=jdata;
+        let nobj=JSON.parse(jdata)
+        console.log(nobj);
+        
     </script>
 </body>
 </html>
