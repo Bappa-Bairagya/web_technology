@@ -3,7 +3,7 @@ const listcontainer=document.getElementById("list-container")
 
 function addtask(){
     if (inputtext.value==="") {
-        alert("you may wright something")
+        alert("you may write something")
     } else {
         const li=document.createElement("li")
         li.innerHTML=inputtext.value
