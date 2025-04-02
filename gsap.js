@@ -74,7 +74,7 @@ var finalpath=`M 10 300 Q 700 300 1450 300`
 var page=document.querySelector("#page3")
 page.addEventListener("mousemove",function(gets){
     console.log(gets.y);
-    path=`M 10 300 Q 700 ${gets.y} 1450 300`
+    path=`M 10 300 Q ${gets.x} ${gets.y} 1450 300`
     gsap.to("#page3 svg path",{
         attr:{d:path},
         duration:0.2
