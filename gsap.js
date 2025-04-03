@@ -73,7 +73,7 @@ var path=`M 10 300 Q 700 300 1450 300`
 var finalpath=`M 10 300 Q 700 300 1450 300`
 var page=document.querySelector("#page3")
 page.addEventListener("mousemove",function(gets){
-    console.log(gets.y);
+    //console.log(gets.y);
     path=`M 10 300 Q ${gets.x} ${gets.y} 1450 300`
     gsap.to("#page3 svg path",{
         attr:{d:path},
@@ -89,3 +89,41 @@ page.addEventListener("mouseleave",function(gets){
         ease: "elastic.out(1,0.1)",
     })
 })
+//page4
+
+var h1=document.querySelector("#page4 h1")
+var h1t=h1.textContent
+
+
+var splith1=h1t.split("")
+var haf=Math.floor(splith1.length/2)
+console.log(haf);
+var clutter=""
+splith1.forEach(function(el,indx){
+    if(indx<haf){
+        clutter+=`<span class="a">${el}</span>`
+    }
+    else{
+        clutter+=`<span class="b">${el}</span>`
+    }
+    
+   
+})
+h1.innerHTML=clutter
+gsap.from("#page4 h1 .a",{
+
+    y:80,
+    duration:1,
+    delay:1,
+    opacity:0,
+    stagger:0.3
+})
+gsap.from("#page4 h1 .b",{
+
+    y:80,
+    duration:1,
+    delay:1,
+    opacity:0,
+    stagger:-0.3
+})
+

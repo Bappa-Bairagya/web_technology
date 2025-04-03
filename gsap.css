@@ -77,3 +77,15 @@ svg{
    background-color: red;
    
 }
+#page4{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#page4 h1{
+   font-size: 200px;
+   
+}
+#page4 h1 span{
+   display: inline-block;
+}
