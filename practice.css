@@ -54,3 +54,20 @@ height: 100vh;
 width: 100%;
 background-color: aqua;
 }
+.move{
+    padding: 3vw 0;
+    background-color: #d8ff04;
+    display: flex;
+    
+}
+.markue{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding: 0 1.5vw;
+    transform: translateX(-100%);
+}
+.markue img{
+    height: 2.5vw;
+}
